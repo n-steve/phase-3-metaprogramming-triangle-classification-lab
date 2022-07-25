@@ -7,7 +7,7 @@ def initialize(x, y, z)
   @x = x
   @y = y
   @z = z
-  raise TriangleError unless [x,y,z].all?(&:positive?) && x + y > z && x + z > y && z + y > x
+  raise TriangleError unless x > 0 && y > 0 && z > 0 && x + y > z && x + z > y && z + y > x
 end
 
 
